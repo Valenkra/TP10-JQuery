@@ -15,13 +15,14 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
+        ViewBag.Series = BD.ObtenerSeries();
         return View();
+    }
+    [HttpPost]
+    public List<Actores> getActores(int IdSerie){
+        return BD.ObtenerActores(IdSerie);
     }
 
-    public IActionResult Privacy()
-    {
-        return View();
-    }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()

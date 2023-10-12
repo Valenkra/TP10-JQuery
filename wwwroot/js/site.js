@@ -1,4 +1,68 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿function MostrarActores(IdS,title, img)
+{
+    $.ajax(
+        {
+            type: 'POST',
+            dataType: 'JSON',
+            url: '/Home/getActores',
+            data: { IdSerie: IdS },
+            success:
+                function (actores)
+                {
+                    $("#NombreSerie").html("Serie "+title);
+                    let listActores = "";
+                    for (let index = 0; index < actores.length; index++) {
+                        listActores += actores[index].nombre + " "; 
+                    }
+                    console.log(listActores);
+                    $("#img-resp").attr("src",img);
+                    $("#informacion").html("Actores: "+ listActores);
+                }
+    });
+}
 
-// Write your JavaScript code.
+function MostrarActores(IdS,title, img)
+{
+    $.ajax(
+        {
+            type: 'POST',
+            dataType: 'JSON',
+            url: '/Home/getActores',
+            data: { IdSerie: IdS },
+            success:
+                function (actores)
+                {
+                    $("#NombreSerie").html("Serie "+title);
+                    let listActores = "";
+                    for (let index = 0; index < actores.length; index++) {
+                        listActores += actores[index].nombre + " "; 
+                    }
+                    console.log(listActores);
+                    $("#img-resp").attr("src",img);
+                    $("#informacion").html("Actores: "+ listActores);
+                }
+    });
+}
+
+function MostrarActores(IdS,title, img)
+{
+    $.ajax(
+        {
+            type: 'POST',
+            dataType: 'JSON',
+            url: '/Home/getActores',
+            data: { IdSerie: IdS },
+            success:
+                function (actores)
+                {
+                    $("#NombreSerie").html("Serie "+title);
+                    let listActores = "";
+                    for (let index = 0; index < actores.length; index++) {
+                        listActores += actores[index].nombre + " "; 
+                    }
+                    console.log(listActores);
+                    $("#img-resp").attr("src",img);
+                    $("#informacion").html("Actores: "+ listActores);
+                }
+    });
+}
