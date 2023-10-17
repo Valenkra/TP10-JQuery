@@ -18,9 +18,20 @@ public class HomeController : Controller
         ViewBag.Series = BD.ObtenerSeries();
         return View();
     }
+
     [HttpPost]
     public List<Actores> getActores(int IdSerie){
         return BD.ObtenerActores(IdSerie);
+    }
+
+    [HttpPost]
+    public Series getSerie(int IdSerie){
+        return BD.ObtenerSerie(IdSerie);
+    }
+
+    [HttpPost]
+    public List<Temporadas> getSeasons(int IdSerie){
+        return BD.ObtenerTemporadas(IdSerie);
     }
 
 

@@ -9,8 +9,8 @@
                 <h5 id="NombreDeSerie">@serie.Nombre</h5>
                 <p class="Descripcion">@serie.Sinopsis</p>
                 <button type="button" data-bs-toggle="modal" data-bs-target="#Modal" onclick="MostrarActores(@serie.IdSerie, '@serie.Nombre', '@serie.ImagenSerie')" class="btn btn-primary actores">Info de actores</button>
-                <button type="button" data-toggle="modal" data-target="#Modal" onclick="MostrarSerie(@serie.IdSerie)"  class="btn btn-primary series">Info de la serie</button>
-                <button type="button" data-toggle="modal" data-target="#Modal" onclick="MostrarTemporada(@serie.IdSerie)"  class="btn btn-primary temporadas">Info de temporadas</button>
+                <button type="button" data-bs-toggle="modal" data-bs-target="#Modal" onclick="MostrarInfoSerie(@serie.IdSerie, '@serie.Nombre', '@serie.ImagenSerie')"  class="btn btn-primary series">Info de la serie</button>
+                <button type="button" data-bs-toggle="modal" data-bs-target="#Modal" onclick="MostrarTemporadas(@serie.IdSerie, '@serie.Nombre', '@serie.ImagenSerie')"  class="btn btn-primary temporadas">Info de temporadas</button>
             </div>
         </div>
     }
